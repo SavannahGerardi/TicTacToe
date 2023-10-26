@@ -16,11 +16,14 @@ def print_board(board):
 
 #ask user if they are playing alone or with another person
 user_input=input("would you like to play? Alone or with a friend?")
-print_board(gameboard)
-#code if playing alone
 
+#code if playing alone
+if user_input == "alone":
+    print("you chose alone")
 
 #code if playing together
+if user_input == "with friends":
+    print("you chose with friends")
 
 #code if game over
 
