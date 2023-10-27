@@ -4,7 +4,10 @@ player_two_wins = 0
 
 user_input="yes"
 
-gameboard=[["x","o","o"],["x","x","x"],["o","o","x"]]
+gameboard=[["","",""],["","",""],["","",""]]
+currentPlayer = "X"
+winner = None
+gamerunning = True
 
 def print_board(board):
     print('┌───┬───┬───┐')
@@ -14,8 +17,6 @@ def print_board(board):
             print('├───┼───┼───┤')
     print('└───┴───┴───┘')
 
-#ask user if they are playing alone or with another person
-user_input=input("would you like to play? Alone or with a friend?")
 
 #code if playing alone
 if user_input == "alone":
@@ -27,5 +28,16 @@ if user_input == "with friends":
 
 #code if game over
 
-#code who won/lost
 
+#code who won/lost
+def checkhorizontle(gameboard):
+    global winner
+    if gameboard[0][0] == gameboard[0][1] == gameboard[0][2] and gameboard[0][2] != "":
+        print("winner")
+
+
+
+#ask user if they are playing alone or with another person
+user_input=input("would you like to play? Alone or with a friend?")
+
+checkhorizontle(gameboard)
